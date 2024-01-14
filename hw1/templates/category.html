@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block title %}{{ super() }} - category{% endblock %}
+
+{% block content %}
+
+<h3>список категорий</h3>
+{% for cat in context.cat_list %}
+    <a href="#">{{ cat }}</a>
+{% endfor %}
+
+{% if context.product_list %}
+    <p>список товаров</p>
+    {% for product in context.product_list %}
+        <a href="#">{{ product }}</a>
+    {% endfor %}
+{% endif %}
+
+{% block product %}<p>выберите товар</p>{% endblock %}
+
+{% endblock %}
