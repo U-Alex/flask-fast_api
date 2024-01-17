@@ -1,0 +1,10 @@
+{% if user_name %}
+<p>добро пожаловать, {{ user_name }} <a href="{{ url_for('logout') }}">Выход</a></p>
+{% else %}
+<p>добро пожаловать, гость</p>
+<form action="{{ url_for('login') }}" method="post">
+    <input type="text" name="name">
+    <input type="email" placeholder="Enter Your Email" name="email">
+    <input type="submit" value="login">
+</form>
+{% endif %}
