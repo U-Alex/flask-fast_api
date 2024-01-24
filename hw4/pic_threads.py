@@ -3,7 +3,7 @@ import time
 import requests
 import threading
 
-import default_urls
+import pic_default_urls
 
 
 def get_pic(pic_url):
@@ -16,7 +16,7 @@ def get_pic(pic_url):
 
 
 if __name__ == '__main__':
-    urls = [arg for arg in argv[1:]] if len(argv) > 1 else default_urls.default_url
+    urls = [arg for arg in argv[1:]] if len(argv) > 1 else pic_default_urls.default_url
     time_total = time.time()
 
     threads = []

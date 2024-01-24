@@ -3,7 +3,7 @@ import time
 import asyncio
 import aiohttp
 
-import default_urls
+import pic_default_urls
 
 
 async def get_pic(pic_url):
@@ -27,7 +27,7 @@ async def main():
 
 
 if __name__ == '__main__':
-    urls = [arg for arg in argv[1:]] if len(argv) > 1 else default_urls.default_url
+    urls = [arg for arg in argv[1:]] if len(argv) > 1 else pic_default_urls.default_url
     time_total = time.time()
 
     asyncio.run(main())
